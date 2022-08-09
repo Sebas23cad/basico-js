@@ -2,8 +2,74 @@
 <html>
 <head>
     <title>Mi primera web</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
+
+    <table style="width: 500px;">
+        <thead>
+            <tr>
+                <th>Producto</th>
+                <th>Precio</th>
+                <th>Cliente</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hola beats</td>
+                <td>Gratis</td>
+                <td>Juancho</td>
+            </tr>
+            <tr>
+                <td>Chanchito triste con depresion :(</td>
+                <td>No esta en venta</td>
+                <td>Ratigueya</td>
+            </tr>
+            <tr>
+                <td>chanchito feliz</td>
+                <td>20,59$</td>
+                <td>Mister popo</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td></td>
+            <td>Total: 20,59</td>
+            <td></td>
+        </tfoot>
+    </table>
+
+    <!-- ul es lista no ordenada-->
+    <ul>
+        <li>Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+    </ul>
+
+    <!-- ol es lista ordenada-->
+
+    <ol>
+        <li value="30">Elemento 1</li>
+        <li>Elemento 2</li>
+        <li>Elemento 3</li>
+        <li>Elemento 4</li>
+        <li>Elemento 5</li>
+        <li>
+            <ol>
+                <li style="list-style-type: lower-roman;">sub elemento 1</li>
+                <li style="list-style-type: lower-roman;">sub elemento 2</li>
+                <li style="list-style-type: lower-greek;">sub elemento 3</li>
+                <li style="list-style-type: lower-greek;">sub elemento 4</li>
+                <li style="list-style-type: lower-greek;">sub elemento 5</li>
+            </ol>
+        </li>
+    </ol>
+
     <h1>Mi primer heading</h1>
     <form action="/formulario" method="post">
         <label for="nombre">Nombre</label>
@@ -15,9 +81,9 @@
         <label for="comentario">comentario</label>
         <textarea cols="50" rows="10" name="comentario" id="comentario" placeholder="comentario">Este es un valor por defecto</textarea>
         <br>
-        <button type="button">Tipo boton</button>
-        <button type="reset">Tipo boton</button>
-        <button type="menu">Tipo boton</button>
+        <button type="button"> <img src="./img/Jc sebas.png" width="200"> boton</button>
+        <button type="reset">Tipo reset</button>
+        <button type="submit">Tipo submit</button>
     </form>
     <h2>No mames</h2>
     <h3>No mames 3</h3>
