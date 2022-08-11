@@ -1,0 +1,190 @@
+#titulo {
+    color: aquamarine;
+}
+
+p.especial {
+    color: rgb(73, 15, 68);
+}
+
+.parrafo {
+    color: blueviolet;
+}
+
+div h2, div h3 {
+    color: brown;
+}
+
+div p {/*Podemos dejar aqui un comentario*/
+    color: greenyellow;
+}
+
+/* * {
+    font-size: 24px;
+    color: black; /*Podemos dejar aqui un comentario*/
+} */
+
+/*Este es nuestro primer comentario y asi se hace uWu|*/
+/*
+Un comentario con muchas lineas
+*/
+/*
+.color {
+    color: #000000;
+    color: #000;
+}
+.color {
+    color: rgb(250, 250, 110);
+}*/
+
+.color {
+    /* border: 5px rgb(224, 89, 89) groove; */
+    /*
+        dotted
+        dashed
+        solid
+        double
+        groove
+        ridge
+        inset
+        outset
+        none
+        hidden
+    */
+    border-style: solid;
+    border-color: aqua;
+    border-radius: 5px;
+    border-width: 1rem;
+}
+
+#fondo {
+    background-color: rgba(255, 0, 0);
+    /* opacity: 0.7; */
+    /* background-image: url('https://4.bp.blogspot.com/-YxKJxL_qzvQ/XUZAOEHwiZI/AAAAAAAAmYs/lAnqYsvs_L0aJEkOVZc2KS2m-PuzNDOFQCLcBGAs/w1200-h630-p-k-no-nu/episodio-one-piece-sin-relleno.jpg');
+    background-size: 400px 400px;
+    background-repeat: no-repeat;
+    background-position: left bottom; */
+    height: 400px;
+    background: #f00 url('https://4.bp.blogspot.com/-YxKJxL_qzvQ/XUZAOEHwiZI/AAAAAAAAmYs/lAnqYsvs_L0aJEkOVZc2KS2m-PuzNDOFQCLcBGAs/w1200-h630-p-k-no-nu/episodio-one-piece-sin-relleno.jpg') no-repeat center center / 400px 400px;
+}
+
+.margen {
+    background-color: chocolate;
+    margin: 15px;
+    padding: 30px 15px 5px;
+    border: solid 1px black;
+    height: 100px;
+    width: 50px;
+    overflow: scroll;
+    outline: 1px solid red;
+}
+
+.texto {
+    font-family: 'Tiro Gurmukhi', sans-serif;
+    text-align: justify;
+    text-decoration: overline;
+    text-shadow: 3px 5px 5px violet;
+}
+
+/* El orden de estos importa y siempre van asi y si no tienes uno simplemente pones en orden decendente el siguiente */
+
+a:link {
+    color: burlywood;
+}
+
+a:visited {
+    color: aqua;
+}
+
+a:hover {
+    color: blue;
+}
+
+a:active {
+    color: #f00;
+}
+
+ul {
+    background-color: cyan;
+    list-style-type: georgian;
+    /* padding-left: 0; */
+    /* list-style-position: inside; */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: solid 1px #eee;
+    padding: 5px;
+}
+
+th {
+    background-color: tomato;
+    color: white;
+    text-align: left;
+}
+
+tr:nth-child(odd) {
+    background-color: #eee;
+}
+
+tr:hover {
+    background-color: #aaa;
+    cursor: pointer;
+}
+
+span {
+    display: block;
+    /* display: none; */
+    /* visibility: hidden; */
+    max-width: 300px;
+    background-color: darkcyan;
+}
+
+.inline {
+    display: inline;
+}
+
+#position {
+    position: sticky;
+    left: 20px;
+    top: 25px;
+    /* bottom: 10px; */
+    /* right: 20px; */
+}
+
+.left {
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+
+.right {
+    float: right;
+}
+
+.container {
+    height: 200px;
+}
+
+.column {
+    margin: 0;
+    padding: 10px 0px;
+    width: 25%;
+}
+
+.linea-bloque {
+    display: inline-block;
+    height: 55px;
+    background-color: antiquewhite;
+}
+
+.center {
+    padding: 50px 0;
+    text-align: center;
+    width: 200px;
+    margin: 0 auto;
+    background-color: yellow;
+}

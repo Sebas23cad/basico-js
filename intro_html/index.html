@@ -2,15 +2,48 @@
 <html>
 <head>
     <title>Mi primera web</title>
-    <style>
-        table, th, td {
-            border: 1px solid black;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Gurmukhi:ital@1&display=swap" rel="stylesheet">
 </head>
 <body>
+    <section class="center">
+        Hola mundo
+    </section>
+    <div class="linea-bloque">inline block</div>
+    <div class="linea-bloque">inline block</div>
+    <div class="container">
+        <article class="column right">1</article>
+        <article class="column right">2</article>
+        <article class="column right">3</article>
+        <article class="column right">4</article>
+    </div>
+    <div class="container">
+        <img src="https://static.wikia.nocookie.net/espiritudelucha/images/a/a0/Volg_-_Imagen_para_Infobox.png/revision/latest?cb=20160717030417&path-prefix=es" class="left">
+        <p>Soy un parrafo a la derecha</p>
+    </div>
+    <div class="inline">lala</div>
+    <div class="inline">lele</div>
+    <span>span1</span>
+    <span>span2</span>
+    <article id="position">Soy prop de posicion</article>
+    <a target="_blank" href="https://www.google.com.ec">Chanchito feliz</a>
+    <p class="texto">Esto es un texto prueba muchisimo mucho demasiado largo solo para una prueba</p>
+    <div class="margen">
+        Chanchito de margen
+    </div>
+    <article id="fondo">
+        Ver la propiedad de background
+    </article>
+    <h1 class="color">Propiedad color</h1>
+    <div>
+        <p>Lo que sea es una prueba</p>
+        <h2 id="sub">Hello</h2>
+        <h3>No matter</h3>
+    </div>
 
-    <table style="width: 500px;">
+    <table>
         <thead>
             <tr>
                 <th>Producto</th>
@@ -45,7 +78,7 @@
     <!-- ul es lista no ordenada-->
     <ul>
         <li>Elemento 1</li>
-        <li>Elemento 2</li>
+        <li>Elemento 2 vamos por hay caminando para ver una propiedad</li>
         <li>Elemento 3</li>
         <li>Elemento 4</li>
         <li>Elemento 5</li>
@@ -61,16 +94,16 @@
         <li>Elemento 5</li>
         <li>
             <ol>
-                <li style="list-style-type: lower-roman;">sub elemento 1</li>
-                <li style="list-style-type: lower-roman;">sub elemento 2</li>
-                <li style="list-style-type: lower-greek;">sub elemento 3</li>
-                <li style="list-style-type: lower-greek;">sub elemento 4</li>
-                <li style="list-style-type: lower-greek;">sub elemento 5</li>
+                <li>sub elemento 1</li>
+                <li>sub elemento 2</li>
+                <li>sub elemento 3</li>
+                <li>sub elemento 4</li>
+                <li>sub elemento 5</li>
             </ol>
         </li>
     </ol>
 
-    <h1>Mi primer heading</h1>
+    <h1 id="titulo">Mi primer heading</h1>
     <form action="/formulario" method="post">
         <label for="nombre">Nombre</label>
         <input value="chanchito" type="text" id="nombre" name="nombre" placeholder="Chanchito feliz ...">
@@ -90,11 +123,12 @@
     <h4>Omg</h4>
     <h5>Y ahora que</h5>
     <h6>Ahora si biene tu tio</h6>
-    <p>Manolo esta con el chachito feliz.</p>
-    <p>El chachio esta muy triste</p>
+    <p class="parrafo">Manolo esta con el chachito feliz.</p>
+    <p class="parrafo">El chachio esta muy triste</p>
+    <p class="especial">El chachio esta muy triste</p>
     <hr>
     <h2>Chanchito manuel</h2>
-    <p>prueba de texto para identificar un parrafo muchisimo mucho <span style="color:aqua"> <br> mucho demas</span> demasiado largo</p>
+    <p class="parrafo especial">prueba de texto para identificar un parrafo muchisimo mucho <span style="color:aqua"> <br> mucho demas</span> demasiado largo</p>
     <!-- este texto es un comentario y asi se escribe, es decir solo nosotros lo vamos a ver-->
     <a target="_blank" href="https://www.google.com">Ir a google</a><br>
     <img src="./img/Jc sebas.png" width="400">
