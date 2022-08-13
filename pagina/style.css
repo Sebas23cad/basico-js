@@ -1,3 +1,10 @@
+:root {
+    --black: rgb(44, 51, 51);
+    --navy: rgb(57, 91, 100);
+    --celeste-claro: rgb(165, 201, 202);
+    --white: rgb(231, 246, 242);
+}
+
 html {
     font-family: 'Merriweather', serif;
 }
