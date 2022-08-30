@@ -4,11 +4,62 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <title>Mokepon 2.01</title>
         <link rel="stylesheet" href="./style.css">
         <script src="./index.js"></script>
     </head>
     <body>
-        
+        <h1>Mokepon! ☘🔥💧</h1>
+
+        <section id="seleccionar-mascota">
+            <h2>Elije tu mascota para la guerra⚔:</h2>
+
+            <input type="radio" name="mascota" id="hipodoge">
+            <label for="hipodoge">Hipodoge</label>
+            <input type="radio" name="mascota" id="capipepo">
+            <label for="capipepo">Capipepo</label>
+            <input type="radio" name="mascota" id="ratigueya">
+            <label for="ratigueya">Ratigueya</label>
+            <input type="radio" name="mascota" id="langostelvis">
+            <label for="langostelvis">Langostelvis</label>
+            <input type="radio" name="mascota" id="tucapalma">
+            <label for="tucapalma">Tucapalma</label>
+            <input type="radio" name="mascota" id="pydos">
+            <label for="pydos">Pydos</label>
+            
+
+            <!-- mascotas:
+            hipodoge -> agua
+            capipepo -> tierra
+            ratigueya -> fuego
+            langostelvis -> agua y fuego
+            tucapalma -> agua y tierra
+            pydos -> tierra y fuego
+            -->
+
+            <button id="boton-mascota">Selecionar</button>
+        </section>
+
+        <section id="seleccionar-ataque">
+            <h2>Elije tu ataque👊:</h2>
+
+            <p>Tu mascota <span id="mascota-jugador"></span> tiene <span>3</span> vidas</p>
+            <p>La mascota <span id="mascota-enemigo"></span> del enemigo tiene <span>3</span> vidas</p>
+
+            <p>
+                <button id="boton-fuego">Fuego 🔥</button>
+                <button id="boton-agua">Agua 💧</button>
+                <button id="boton-tierra">Tierra 🌱</button>
+            </p>
+        </section>
+
+        <section id="mensajes">
+            <p>Tu mascota ataco con <span>Fuego</span>, las mascota del enemigo ataco con <span>Tierra</span> - <span>Ganaste</span> 🥂🎌</p>
+        </section>
+
+        <section id="boton-reiniciar">
+            <button>Volver a jugar 🏓</button>
+        </section>
+
     </body>
 </html>
