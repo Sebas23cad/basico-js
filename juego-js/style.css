@@ -1,0 +1,45 @@
+:root {
+    --primary-color: #f38721;
+    --secondary-color: rgb(47, 0, 85);
+    --thirdh-color: rgb(1, 38, 141);
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--secondary-color);
+}
+
+.titulo {
+    color: var(--primary-color);
+    font-size: 32px;
+}
+
+.subtitulo {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+#seleccionar-mascota{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjetas {
+    display: flex;
+    gap: 10px;
+}
+
+.tarjeta-de-mokepon {
+    width: 100px;
+    height: 100px;
+    background: var(--thirdh-color);
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+input {
+    display: none;
+}
