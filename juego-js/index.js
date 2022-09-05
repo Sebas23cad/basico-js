@@ -19,6 +19,9 @@ const ataques_del_enemigo = document.getElementById('ataquesDelEnemigo')
 const contenedorTarjetas = document.getElementById('contenedorTarjetas')
 const contenedorAtaques = document.getElementById('contenedorAtaques')
 
+const sectionVerMapa = document.getElementById('ver-mapa')
+const mapa = document.getElementById('mapa')
+
 let mokepones = []
 let ataqueJugador = []
 let ataqueEnemigo = []
@@ -38,8 +41,12 @@ let botonTierra
 let botones = []
 let indexAtaqueJugador
 let indexAtaqueEnemigo
+let victoriasJugador = 0
+let victoriasEnemigo = 0
 let vidasJugador = 3
 let vidasEnemigo = 3
+let lienzo = mapa.getContext("2d")
+let intervalo
 
 class Mokepon {
     constructor(nombre, foto, vida) {
@@ -47,6 +54,14 @@ class Mokepon {
         this.foto = foto
         this.vida = vida
         this.ataques = []
+        this.x = 20
+        this.y = 30
+        this.ancho = 80
+        this.alto = 80
+        this.mapaFoto = new Image()
+        this.mapaFoto.src = foto
+        this.velocidadX = 0
+        this.velocidadY = 0
     }
 }
 
@@ -105,6 +120,7 @@ mokepones.push(hipodoge, capipepo, ratigueya, langostelvis, tucapalma, pydos)
 function iniciarJuego() {
     
     sectionSeleccionarAtaque.style.display = 'none'
+    sectionVerMapa.style.display = 'none'
 
     mokepones.forEach((mokepon) => {
         opcionDeMokepones = `
@@ -133,8 +149,10 @@ function iniciarJuego() {
 
 function seleccionarMascotaJugador() {
 
-    sectionSeleccionarAtaque.style.display = 'flex'    
+    // sectionSeleccionarAtaque.style.display = 'flex'    
     sectionSeleccionarMascota.style.display = 'none'
+    sectionVerMapa.style.display = 'flex'
+    iniciarMapa()
 
     if (inputHipodoge.checked) {
         spanMascotaJugador.innerHTML = inputHipodoge.id
@@ -194,12 +212,15 @@ function secuenciaAtaque() {
             if (e.target.textContent === '🔥') {
                 ataqueJugador.push('FUEGO')
                 boton.style.background = 'rgb(77, 109, 151)'
+                boton.disabled = true
             } else if (e.target.textContent === '💧') {
                 ataqueJugador.push('AGUA')
                 boton.style.background = 'rgb(77, 109, 151)'
+                boton.disabled = true
             } else {
                 ataqueJugador.push('TIERRA')
                 boton.style.background = 'rgb(77, 109, 151)'
+                boton.disabled = true
             }
             ataqueAleatorioEnemigo()
         })
@@ -248,19 +269,23 @@ function combate() {
         } else if(ataqueJugador[index] === "FUEGO" && ataqueEnemigo[index] === "TIERRA") {
             indexAmbosOponentes(index, index)
             crearMensaje("Fuck yeah!✨ Ganaste 🎊🎉🎌")
-            spanVidasEnemigo.innerHTML = vidasEnemigo
+            victoriasJugador++
+            spanVidasJugador.innerHTML = victoriasJugador
         } else if(ataqueJugador[index] === "AGUA" && ataqueEnemigo[index] == "FUEGO") {
             indexAmbosOponentes(index, index)
             crearMensaje("Fuck yeah!✨ Ganaste 🎊🎉🎌")
-            spanVidasEnemigo.innerHTML = vidasEnemigo
+            victoriasJugador++
+            spanVidasJugador.innerHTML = victoriasJugador
         } else if(ataqueJugador[index] === "TIERRA" && ataqueEnemigo[index] === "AGUA") {
             indexAmbosOponentes(index, index)
             crearMensaje("Fuck yeah!✨ Ganaste 🎊🎉🎌")
-            spanVidasEnemigo.innerHTML = vidasEnemigo
+            victoriasJugador++
+            spanVidasJugador.innerHTML = victoriasJugador
         } else {
             indexAmbosOponentes(index, index)
             crearMensaje("Perdiste 😭🛡")
-            spanVidasJugador.innerHTML = vidasJugador
+            victoriasEnemigo++
+            spanVidasEnemigo.innerHTML = vidasEnemigo
         }
     }
 
@@ -268,9 +293,11 @@ function combate() {
 }
 
 function revisarVidas() {
-    if (vidasEnemigo == 0) {
-        crearMensajeFinal("Felicidades ganaste el juego 😂")
-    } else if (vidasJugador == 0) {
+    if (victoriasJugador === victoriasEnemigo) {
+        crearMensajeFinal("Tuvimos un empate! Omg! 😲")
+    } else if (victoriasJugador > victoriasEnemigo) {
+        crearMensajeFinal("Eso es! Ganaste 🎉🎊✨")
+    } else {
         crearMensajeFinal("Lo siento perdiste el juego 😭")
     }
 }
@@ -292,9 +319,6 @@ function crearMensajeFinal(resultadoFinal) {
 
     sectionMensajes.innerHTML = resultadoFinal
 
-    botonFuego.disabled = true
-    botonAgua.disabled = true
-    botonTierra.disabled = true
     sectionReiniciar.style.display = 'block'
 }
 
@@ -304,6 +328,68 @@ function reiniciarJuego() {
 
 function aleatorio(min, max) {
     return Math.floor(Math.random()*(max - min + 1) + min )
+}
+
+function pintarPersonaje() {
+    capipepo.x = capipepo.x + capipepo.velocidadX
+    capipepo.y = capipepo.y + capipepo.velocidadY
+    lienzo.clearRect(0, 0, mapa.width, mapa.height)
+    lienzo.drawImage(
+        capipepo.mapaFoto,
+        capipepo.x,
+        capipepo.y,
+        capipepo.ancho,
+        capipepo.alto
+    )
+}
+
+function moverDerecha() {
+    capipepo.velocidadX = 5
+}
+
+function moverArriba() {
+    capipepo.velocidadY = - 5
+}
+
+function moverAbajo() {
+    capipepo.velocidadY = 5
+}
+
+function moverIzquierda() {
+    capipepo.velocidadX = -5
+}
+
+function detenerMovimiento() {
+    capipepo.velocidadX = 0
+    capipepo.velocidadY = 0
+}
+
+function sePresionoUnaTecla(event) {
+    switch (event.key) {
+        case 'ArrowUp':
+            moverArriba()
+            break
+        case 'ArrowDown':
+            moverAbajo()
+            break
+        case 'ArrowLeft':
+            moverIzquierda()
+            break
+        case 'ArrowRight':
+            moverDerecha()
+            break
+        default:
+            break
+    }
+}
+
+function iniciarMapa() {
+    // clase 64 imagenes y personajes de fondo
+    intervalo = setInterval(pintarPersonaje, 50)
+
+    window.addEventListener('keydown', sePresionoUnaTecla)
+
+    window.addEventListener('keyup', detenerMovimiento)
 }
 
 window.addEventListener('load', iniciarJuego)

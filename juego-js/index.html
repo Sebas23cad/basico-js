@@ -21,6 +21,14 @@
             </div>
             <button id="boton-mascota">Selecionar</button>
         </section>
+        <section id="ver-mapa">
+            <h1 class="titulo">Recorre el mapa con tu mokepon</h1>
+            <canvas id="mapa"></canvas>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverArriba()">Arriba</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverIzquierda()">Izquierda</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverAbajo()">Abajo</button>
+            <button onmouseup="detenerMovimiento()" onmousedown="moverDerecha()">Derecha</button>
+        </section>
 
         <section id="seleccionar-ataque">
             <h1 class="titulo">Mokepon! ☘🔥💧</h1>
@@ -41,12 +49,12 @@
 
             <div class="ataques">
                 <div class="ataques-jugador">
-                    <p id="vidas-jugador">3</p>
+                    <p id="vidas-jugador">0</p>
                     <p id="mascota-jugador"></p>
                     <div id="ataquesDelJugador"></div>
                 </div>
                 <div class="ataques-enemigo">
-                    <p id="vidas-enemigo">3</p>
+                    <p id="vidas-enemigo">0</p>
                     <p id="mascota-enemigo"></p>
                     <div id="ataquesDelEnemigo"></div>
                 </div>  

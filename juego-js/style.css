@@ -84,7 +84,7 @@ input:checked + label{
     box-sizing: border-box;
     border-radius: 20px;
     border-color: transparent;
-    width: 100px;
+    width: 90px;
 }
 
 .boton-de-ataque:hover {
@@ -131,6 +131,16 @@ input:checked + label{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#ver-mapa {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mapa {
+    border: 2px solid var(--primary-color);
 }
 
 @media (max-width: 360px) {
