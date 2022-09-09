@@ -1,2 +1,8 @@
-#Todos los archivos sencibles
+# Todos los archivos sencibles
 .env
+
+# Ignora los archivos que terminen en json
+*.json
+
+# Ignora los archivos de la carpeta
+node_modules/
