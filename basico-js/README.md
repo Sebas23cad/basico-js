@@ -53,15 +53,47 @@ Es una operacion que hace con valores que le pasamos, los conocemos como paramet
 
 ### Scope
 
-<!-- Clase 7 scope -->
+Es el alcance que tienen las variables y nos referimos a dependiendo de donde y como las declares vamos a poder usarlas o no.
+
+>Miralo como un estadio de futbol, hay diferentes sectores para los aficionados, a esto piensalo que si mas afuera los ponemos mas alcance de vista tienen. Ahora funciona igual con las variables si la ponemos en el scoop global cualquier funcion puede utilizar esas variables, pero si la creamos en una funcion solo esa funcion la va a poder usar a menos que lo retornes. Le llamamos scoop local el entorno donde trabaja la funcion.
+
+Si lo quieres ver de otra manera puede ser como una cebolla va por capas como la pelicula de shrek. Estas se usan en el lugar que se declaro y en un entorno local dentro del entorno principal. Un ejemplo en [codigo](scoop.js)
+
+### Hoisting
+
+Es cuando tu creas o declaras las variables y funciones antes de que se procese el codigo.
+
+>Esta bien aclarar que esto solo sucede con versiones inferiores a ecmascript 6, es decri desde la 5 hacia abajo. Por eso pienso que puede estar bien entenderlo pero no es determinante. Tambien solo pasaban con las variables y funciones que utilizan var pero con la llegada de las nuevas variables esto se elimino.
+
+By the way, aqui esta el [enlace](hoisting.js) a ejemplos en codigo.
+
+### Coerción
+
+Es la forma en que el navegador cambia el tipo de dato a otro en corde a lo que este crea mejor o como esta hecho. Osea cambia un tipo de valor a otro en dependencia de lo que hagas como al principio vimos que en la una se hacia un string y en el otro se hacia la operacion de multiplicacion.
+
+### Valores: Truthy and falsy
+
+Los valores falsos son vacios, 0, null, NaN, undefined, false y string vacios.
+Los valores verdaderos por default son el resto de esto son verdaderos hasta strings con solo un espacio, un array vacio, objeto vacio y una funcion.
+
+### Operadores: Asignacion, comparacion y aritmeticos
+
+Ya usamos operadores como los signos de la suma o resta los cuales son llamados operadores de operacion. Tambien tenemos operador de asignacion que es el igual solo o la suma con strings que hace una concatenacion entre ellos.. Ahora los de comparacion son dos iguales (compara si el valor es igual) y tres iguales (debe ser en todos los sentidos igual) o los mayor y menor que.
+Algo que es importante que aprendan es los operadores logicos, los cuales dependiendo el lenguaje su sintaxis es diferente pero hacen lo mismo como y en python es and y para javascript es &&, o en python es or y en javascript es ||.
 
 ---
 
 ## Condicionales
 
-###
+### If, else, else if y switch
 
->
+<!-- clase numero 12 condicionales if, etc. Terminar el reto de piedra papel y tijera -->
+
+Las condicionales son las reglas que le damos a nuestro programa para que haga algo o se vaya por un camino diferente, en javascript tenemos dos el if y el switch aqui les dejo el ejemplo en [codigo](condicionales.js)
+
+La principal diferencia entre estas condicionales es que en el switch lo que hacemos es usar la condicional por casos. Para el if lo usamos como caminos los cuales son infinitos y los casos son casos que si pasan hagan algo. Mira para que entiendan los casos velos como cuando te tomaban lista en el colegio el caso es cuando digan tu nombre tu respondes presente y asi va de caso en caso hasta que llega al tuyo.
+
+[reto piedra, papel y tijera](condicionales.js) Completado hecho por mi.
 
 ---
 
