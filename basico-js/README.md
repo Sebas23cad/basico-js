@@ -87,21 +87,25 @@ Algo que es importante que aprendan es los operadores logicos, los cuales depend
 
 ### If, else, else if y switch
 
-<!-- clase numero 12 condicionales if, etc. Terminar el reto de piedra papel y tijera -->
-
 Las condicionales son las reglas que le damos a nuestro programa para que haga algo o se vaya por un camino diferente, en javascript tenemos dos el if y el switch aqui les dejo el ejemplo en [codigo](condicionales.js)
 
 La principal diferencia entre estas condicionales es que en el switch lo que hacemos es usar la condicional por casos. Para el if lo usamos como caminos los cuales son infinitos y los casos son casos que si pasan hagan algo. Mira para que entiendan los casos velos como cuando te tomaban lista en el colegio el caso es cuando digan tu nombre tu respondes presente y asi va de caso en caso hasta que llega al tuyo.
 
-[reto piedra, papel y tijera](condicionales.js) Completado hecho por mi.
+[reto piedra, papel y tijera](juego-papel.js) Completado hecho por mi.
 
 ---
 
 ## Arrays y loops
 
-###
+### Arrays
 
->
+El array es un dato tipo objeto porque puede guardar mas valores dentro de si mismo.
+
+Ejemplo de un array en [codigo](arrays.js)
+
+### Loops
+
+<!-- Nos quedamos en la clase 15 loops: for y for of -->
 
 ---
 
