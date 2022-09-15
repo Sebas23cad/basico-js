@@ -105,12 +105,29 @@ Ejemplo de un array en [codigo](arrays.js)
 
 ### Loops
 
-<!-- Nos quedamos en la clase 15 loops: for y for of -->
+Los loops o ciclos son lo que su nombre lo indica hacer acciones una cantidad de beses hasta llegar a un resultado que queramos. Aqui esta ejemplo en [codigo](loops.js). Cosas importantes si no entiendes que esta pasando con una variable, recuerda tienes tu super poder que es el console.log(), para saber que esta pasando con lo que no entiendas y verlo en consola.
 
 ---
 
 ## Objects y metodos de arrays
 
-###
+### Objects
 
->
+Bueno tengo el deber de que entiendan que es un objeto, ya que javascript esta diseñado en base a esto, asi que para empesar. Un objeto es una astraccion de un objeto del mundo real a codigo. Entonses te diras no entiendo, y yo te dire me vale!.
+
+>JAJA con calma okey. Piensa que tiene un objeto. Un objeto tiene propiedades y comportamientos, es decir, una propiedad el tipo de objeto, el tamaño o cualquier caracteristica que tenga el objeto y con comportamientos a que dicho objeto puede realizar acciones como moverse o talves hasta saltar. Ejemplo:
+
+1. Balon de futbol (Objeto), esta lleno de aire, es blanco con manchas negras, es de tamaño 5 (todas estas son propiedades). Puede moverse si lo pateamos, botear si lo lanzamos e incluso desplazarse si lo tiramos (Estos son sus comportamientos). Ejemplo en [codigo](objeto.js)
+
+Quieres mas eres una goloza.
+
+2. Vehiculo sera nuestro objeto, ahora piensa sus caracteristicas como la marca, el color, o hasta el tipo si es electrico o que. Piensa en sus comportamiento como se mueve, estacionarse o hasta poder apagarse. Espero que les haya quedado mas claro.
+
+### Funcion constructora
+
+Quisa te estes preguntando que es esto, bueno para entenderlo, debes saque que es lo minimo que se necesita para que puedas construir una clase. Espera que es una clase, y no es un salon con personas.
+En programacion llamamos clase a un modelo que nos ayuda a construir nuestros objetos y el metodo constructor es la maquina que crea todo lo necesario para que exista, es decir, que si eres una goloza y quieres mas atributos o propiedades las puedes tener. Esto se ve en POO. El ejemplo de codigo se los dejo en el archivo anterior.
+
+### Metodos de recorridos de arrays
+
+<!-- Clase numero 19 el mismo nombre que el titulo. -->
