@@ -130,4 +130,4 @@ En programacion llamamos clase a un modelo que nos ayuda a construir nuestros ob
 
 ### Metodos de recorridos de arrays
 
-<!-- Clase numero 19 el mismo nombre que el titulo. -->
+Parra recorrer un array que contenga objetos adentro y aqui les dejo el [codigo](recorrer.js). Cada uno de estos se utiliza para diferentes casos y cada metodo es unico y depende de lo que necesites hacer. Para que no se queden con las ganas de mas, Goloza! aqui les dejo la [documentacion](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array).
